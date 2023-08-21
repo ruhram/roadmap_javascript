@@ -1,0 +1,13 @@
+
+<button id="Button_A"> Press Me </button>
+<h3 id="Heading_A"></h3>
+<script>
+    const Button_A = document.querySelectorAll('Button_A')
+    const Heading_A = document.querySelectorAll('Heading_A')
+    
+    Button_A.onclick() = () => {
+        const name = prompt('What is your name?')
+        alert(`Hello ${name}, nice to see you`)
+        Heading_A.textContent = `Welcome ${name}`
+    }
+</script>
