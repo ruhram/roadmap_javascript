@@ -1,0 +1,24 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <title>Implicit Type Conversions </title>  
+</head>  
+<body>  
+    <h2>Implicit Type Conversions </h2>
+    <script type="text/javascript">
+        document.write(10 + '5'); //string
+        document.write('<br>');
+        document.write('The type is : '+typeof(10+'5'));
+        document.write('<br>');
+        document.write(10 * '5'); //number
+        document.write('<br>');
+        document.write(10+9.6);
+        document.write('<br>');
+        document.write('The type is:'+typeof(10+9.6));
+        document.write('<br>');
+        document.write(10 * 'Hello') //it will return none
+        document.write('<br>');
+        document.write('The Type is: '+typeof(10 * 'Hello'));
+    </script>
+</body>
+</html>
