@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        Map Object
+    </head>
+    <body>
+        <h2>Script</h2>
+        <script>
+            const myMap = new Map(); //constructor
+
+            const keyString = 'a string';
+            const keyObj = {};
+            const keyFunc = function(){};
+
+            // setting the values
+            myMap.set(keyString,'Value associated with a string');
+            myMap.set(keyObj, "value associated with keyObj");
+            myMap.set(keyFunc, "value associated with keyFunc");
+
+            console.log(myMap.size); //3
+
+            //getting the values
+            console.log(myMap.get(keyString)); // 'value associated with a string'
+
+            console.log(myMap.get('a string')); //'value associated with a string'
+            console.log(myMap.get({})); //undefined, because keyObj !== {}
+
+            console.log(myMap.get(function () {})); // undefined, because keyFunc !== function () {}
+
+
+        </script>
+    </body>
+</html>
