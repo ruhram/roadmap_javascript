@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>Buffer</head>
+    <body>
+        <h2>Script</h2>
+        <script>
+            //fixed array buffer
+            const buffer = new ArrayBuffer(16);
+
+            if (buffer.byteLength === 16) {
+                console.log("Yes, it's 16 bytes.");
+            } else {
+                console.log("Oh no, it's the wrong size!");
+            }
+            
+            //we can acces the field in the array just like normal array
+            const int32view = new Int32Array(buffer)
+
+            //Multiple views on the same data 
+            const int16View = new Int16Array(buffer);
+
+            for (let i = 0; i < int16View.length; i++) {
+                console.log(`Entry ${i}: ${int16View[i]}`);
+            }
+
+            int16View[0] = 32;
+            console.log(`Entry 0 in the 32-bit array is now ${int32View[0]}`);
+            
+            //Typed array
+            const typedArray = new Uint8Array([1,2,3,4]);
+            const normalArray = Array.from(typedArray);
+        </script>
+    </body>
+</html>
