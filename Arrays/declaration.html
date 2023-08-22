@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        Declaration
+    </head>
+    <body>
+        <h2>Script</h2>
+        <script type="text/javascript">
+            //empty array
+            let arr = new Array();
+            //let arr = [];
+
+            //Using Length
+            let fruits = ['Apple','Orange','Plum'];
+            alert(fruits.length)
+
+            //Mix values
+            let arrs = ['Apple',{name:'John'},true, function() {alert('Hello');}];
+            alert( arr[1].name); //get the object at index 1 and then show its name
+
+            arrs[3](); //get the function at index 3 and run it
+        </script>
+    </body>
+</html>

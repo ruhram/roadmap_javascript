@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        Pop / push arrays 
+    </head>
+    <body>
+        <h2>Script</h2>
+        <script type="text/javascript">
+            //Pop
+            let fruits = ['Apple','Orange','Pear'];
+            alert( fruits.pop() ); //remove 'Pear' and alert it
+            alert( fruits )
+
+            //Push
+            let fruit = ['Apple','Orange'];
+            fruits.push('Pear');
+            alert(fruits);
+
+            //Shift
+            let fruity = ['Apple','Orange','Pear'];
+            alert(fruity.shift()); //remove apple and alert it
+            alert(fruity)
+
+            //Unshift
+            let fr = ['Orange','Pear'];
+            fr.unshift('Apple');
+            alert(fr); //Apple, Orange, Pear
+
+            //Push and unshift
+            let s = ['Apple'];
+            s.push('Orange','Peach');
+            s.unshift('Pineapple','Lemon');
+
+            alert(s);
+        </script>
+    </body>
+</html>
