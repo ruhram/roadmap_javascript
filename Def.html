@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>Defining Function</head>
+    <body>
+        <script>
+            //Def function 
+            function myFunc(theObject){
+                theObject.make = 'Toyota'
+            }
+
+            const mycar = {
+                make: 'Honda',
+                model: 'Accord',
+                year : 1998
+            };
+
+            myFunc(mycar);
+            console.log(mycar.make);
+
+            //function expression 
+            const factorial = function fac(n){
+                return n < 2 ? 1 : n * fac(n - 1);
+            };
+
+            console.log(factorial(3)); //6
+        </script>
+    </body>
+</html>
