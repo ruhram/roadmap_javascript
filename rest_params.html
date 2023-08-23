@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        Rest Params
+    </head>
+    <body >
+        <h1>Script</h1>
+        <script>
+            function sum(...theArgs){
+                let total = 0;
+                for(const arg of theArgs){
+                    total += arg;
+                }
+                return total;
+            }
+
+            console.log(sum(1,2,3));
+            // Expected Output: 6
+
+            console.log(sum(1,2,3,4));
+            // Expected Output: 10
+        </script>
+    </body>
+</html>
