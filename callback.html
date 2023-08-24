@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        Call Back
+    </head>
+    <body>
+        <script>
+            // Example function that takes a callback
+            function doSomethingAsync(callback) {
+                setTimeout(function() {
+                    console.log("Async operation done!");
+                    callback(); // Call the provided callback function
+                }, 1000);
+            }
+
+            // Using the doSomethingAsync function with a callback
+            doSomethingAsync(function() {
+                console.log("Callback executed!");
+            });
+
+            console.log("After calling doSomethingAsync");
+        </script>
+    </body>
+</html>
