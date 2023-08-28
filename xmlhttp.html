@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>Using the XMLHttpRequest Object</h2>
+        <div id="demo">
+            <button type="button" onclick="loadXMLDoc()">
+                Change content
+            </button> 
+        </div>
+
+        <script>
+            function loadXMLDoc(){
+                //create XMLHttpRequest object
+                var xhttp = new XMLHttpRequest();
+
+                //onreadystatechange specifies a function to be executed every time the status of XMLHttpRequest object changes
+                xhttp.onreadystatechange = function(){
+                    //when readyState property is 4 and the status property is 200 then the response is ready
+                    if(this.readyState == 4 && 
+                    this.status == 200){
+                        //responseText property return the server response as a string
+                        document.getElementById('demo').innerHTML = this.responseText;
+                    }
+                };
+                xhttp.open('GET', 'xmlhttp_info.txt', true);
+                xhttp.send();
+            }
+        </script>
+    </body>
+</html>
